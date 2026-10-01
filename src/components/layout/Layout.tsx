@@ -18,11 +18,11 @@ export default function Layout({children}:{children:ReactNode}){
     <Link to={user?'/perfil':'/login'} className="icon" aria-label="Perfil"><User/></Link>
   </div></header>
   <div className={'overlay'+(open?' show':'')} onClick={()=>setOpen(false)}/>
-  <aside className={'drawer'+(open?' open':'')} aria-hidden={!open}><div className="between"><b>🐰 Bunny Store</b><button className="icon" aria-label="Fechar menu" onClick={()=>setOpen(false)}><X/></button></div>
+  <aside className={'drawer'+(open?' open':'')} aria-hidden={!open}><div className="between"><b className="logo"><img src="./logo.png" alt="" className="logoimg"/> Bunny Store</b><button className="icon" aria-label="Fechar menu" onClick={()=>setOpen(false)}><X/></button></div>
     {links.map(([t,h])=><Link key={t} to={h} onClick={()=>setOpen(false)}>{t}</Link>)}</aside>
   <main className="container page fade">{children}</main>
   <footer className="footer"><div className="container fgrid">
-    <div><b>🐰 Bunny Store</b><p className="muted">Sua loja gamer com itens, contas e serviços. Protótipo frontend — nada aqui é real.</p></div>
+    <div><b className="logo"><img src="./logo.png" alt="" className="logoimg"/> Bunny Store</b><p className="muted">Sua loja gamer com itens, contas e serviços. Protótipo frontend — nada aqui é real.</p></div>
     <div><b>Navegação</b>{[['Início','/'],['Produtos','/produtos'],['Ofertas','/produtos?sort=disc'],['Meus pedidos','/pedidos']].map(([t,h])=><Link key={t} to={h}>{t}</Link>)}</div>
     <div><b>Atendimento</b><Link to="/chat">Suporte / Chat</Link><a href="#/">FAQ</a><button className="linkbtn" onClick={()=>setTerms(true)}>Termos</button><a href="#/">Privacidade</a></div>
     <div><b>Redes</b><div className="social"><a href="#/" aria-label="Discord"><Gamepad2/></a><a href="#/" aria-label="Instagram"><Instagram/></a><a href="#/" aria-label="TikTok"><Music2/></a><a href="#/" aria-label="WhatsApp"><Phone/></a></div></div>
