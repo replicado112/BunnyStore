@@ -28,7 +28,7 @@ export default function Layout({children}:{children:ReactNode}){
     <div><b>Redes</b><div className="social"><a href="#/" aria-label="Discord"><Gamepad2/></a><a href="#/" aria-label="Instagram"><Instagram/></a><a href="#/" aria-label="TikTok"><Music2/></a><a href="#/" aria-label="WhatsApp"><Phone/></a></div></div>
   </div></footer>
   <Link to="/chat" className="fab" aria-label="Atendimento"><MessageCircle/></Link>
-  {(!termsOk||terms)&&<div className="modalbg"><div className="modal fade" role="dialog" aria-modal="true" aria-label="Termos"><h2>Bem-vindo à Bunny Store 🐰</h2>
+  {(!termsOk||terms)&&<div className="modalbg"><div className="modal fade" role="dialog" aria-modal="true" aria-label="Termos"><h2>Bem-vindo à Bunny Store <img src="./logo.png" alt="" className="logoimg"/></h2>
     <p className="muted">Esta é uma loja de demonstração. Ao continuar, você concorda com os termos de uso fictícios: nenhum pagamento é real e os dados ficam apenas no seu navegador.</p>
     <div className="row"><button className="btn" onClick={()=>{setTermsOk(true);setTerms(false)}}>Li e aceito</button><button className="btn ghost" onClick={()=>{setTermsOk(true);setTerms(false)}}>Continuar navegando</button></div></div></div>}
   <div className="toasts" aria-live="polite">{toasts.map(t=><div key={t.id} className="toast">{t.text}</div>)}</div>
