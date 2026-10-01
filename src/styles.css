@@ -48,3 +48,5 @@ input,select,textarea{background:var(--card);color:#fff;border:1px solid var(--l
 .hero .glow{display:none}
 .heroimg{width:100%;max-width:1100px;height:auto;border-radius:20px;object-fit:cover}
 .herobtn{display:flex;justify-content:center;margin:20px 0 8px}
+.logo{display:flex;align-items:center;gap:8px}
+.logoimg{height:36px;width:auto;border-radius:8px}
