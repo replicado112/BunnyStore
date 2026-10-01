@@ -10,7 +10,7 @@ export default function Layout({children}:{children:ReactNode}){
   return(<>
   <header className="header"><div className="container hrow">
     <button className="icon mobile-only" aria-label="Abrir menu" onClick={()=>setOpen(true)}><Menu/></button>
-    <Link to="/" className="logo"><img src="./logo.png" alt="" className="logoimg"/> <b>Bunny</b> Store</Link>
+    <Link to="/" className="logo">🐰 <b>Bunny</b> Store</Link>
     <nav className="desk-only" aria-label="Principal">{[links[0],links[1],links[4],links[5]].map(([t,h])=><NavLink key={t} to={h}>{t}</NavLink>)}</nav>
     <form className="search desk-only" onSubmit={submit} role="search"><Search size={16}/><input aria-label="Pesquisar produtos" placeholder="Pesquisar..." value={q} onChange={e=>setQ(e.target.value)}/></form>
     <Link to="/favoritos" className="icon desk-only" aria-label="Favoritos"><Heart/></Link>
